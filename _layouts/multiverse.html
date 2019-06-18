@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include multiverse-head.html -%}
+
+  <!-- <body class="is-preload"> -->
+  <body>
+
+    <div id="wrapper">
+
+      {%- include multiverse-header.html -%}
+
+      <div id="main">
+        {{ content }}
+      </div>
+
+      {%- include multiverse-footer.html -%}
+
+    </div>
+
+  </body>
+
+</html>
