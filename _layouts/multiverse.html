@@ -11,7 +11,18 @@
       {%- include multiverse-header.html -%}
 
       <div id="main">
-        {{ content }}
+        {% for image in site.images %}
+        <article class="thumb">
+          <a href="{{site.baseurl}}/assets/images/fulls/{{ image.path | split: '/' | last | split: '.' | first }}.jpg" class="image">
+            <img src="{{site.baseurl}}/assets/images/thumbs/{{ image.path | split: '/' | last | split: '.' | first }}.jpg" alt="" />
+          </a>
+          <h2>{{ image.title }}</h2>
+          <p>{{ image.caption }}</p>
+        </article>
+        {% endfor %}
+
+        <!-- no idea where to put this... -->
+        <!-- {{ content }} -->
       </div>
 
       {%- include multiverse-footer.html -%}
