@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include multiverse-head.html -%}
+  {%- include head.html -%}
 
   <!-- <body class="is-preload"> -->
   <body>
 
     <div id="wrapper">
 
-      {%- include multiverse-header.html -%}
+      {%- include header.html -%}
 
       <div id="main">
         {% for image in site.images %}
@@ -25,7 +25,7 @@
         <!-- {{ content }} -->
       </div>
 
-      {%- include multiverse-footer.html -%}
+      {%- include footer.html -%}
 
     </div>
 
